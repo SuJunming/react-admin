@@ -1,0 +1,42 @@
+.App {
+  height: 100%
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+#components-layout-demo-custom-trigger .trigger {
+  font-size: 18px;
+  line-height: 64px;
+  padding: 0 16px;
+  cursor: pointer;
+  transition: color .3s;
+}
+
+#components-layout-demo-custom-trigger .trigger:hover {
+  color: #108ee9;
+}
+
+#components-layout-demo-custom-trigger .logo {
+  height: 32px;
+  background: #333;
+  border-radius: 6px;
+  margin: 16px;
+}
