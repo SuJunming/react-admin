@@ -20,7 +20,7 @@
 
 ### 功能模块
 <span style="color: rgb(184,49,47);">备注：项目只引入了ant-design的部分组件，其他的组件antd官网有源码，可以直接复制到项目中使用，后续有时间补上全部组件。</span>
-<span style="color: rgb(184,49,47);">项目使用了antd的自定义主题功能-->黑色，若想替换其他颜色，具体操作请查看antd官网</span>
+<span style="color: rgb(184,49,47);">项目使用了antd的默认主题功能，若想替换其他颜色，具体操作请查看antd官网</span>
 <!--more-->
 ### 代码目录
 ```js
