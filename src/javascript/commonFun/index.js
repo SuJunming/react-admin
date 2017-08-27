@@ -72,7 +72,7 @@ var CommonFun = {
     },
     //字符串替换(字符串,要替换的字符或者正则表达式（不要写g）,替换成什么)
     replaceAll: function (str, AFindText, ARepText) {
-        raRegExp = new RegExp(AFindText, "g");
+        var raRegExp = new RegExp(AFindText, "g");
         return str.replace(raRegExp, ARepText);
     },
     //字符替换*
@@ -582,61 +582,6 @@ var CommonFun = {
     hide: function (obj) {
         obj.style.display = "none";
     },
-    /* 封装ajax函数
-     * @param {string}obj.type http连接的方式，包括POST和GET两种方式
-     * @param {string}obj.url 发送请求的url
-     * @param {boolean}obj.async 是否为异步请求，true为异步的，false为同步的
-     * @param {object}obj.data 发送的参数，格式为对象类型
-     * @param {function}obj.success ajax发送并接收成功调用的回调函数
-     * @param {function}obj.error ajax发送失败或者接收失败调用的回调函数
-     */
-    //  ajax({
-    //  	type:'get',
-    //  	url:'xxx',
-    //  	data:{
-    //  		id:'111'
-    //  	},
-    //  	success:function(res){
-    //  		console.log(res)
-    //  	}
-    //  })
-    ajax: function (obj) {
-        obj = obj || {};
-        obj.type = obj.type.toUpperCase() || 'POST';
-        obj.url = obj.url || '';
-        obj.async = obj.async || true;
-        obj.data = obj.data || null;
-        obj.success = obj.success || function () {
-            };
-        obj.error = obj.error || function () {
-            };
-        var xmlHttp = null;
-        if (XMLHttpRequest) {
-            xmlHttp = new XMLHttpRequest();
-        } else {
-            xmlHttp = new ActiveXObject('Microsoft.XMLHTTP');
-        }
-        var params = [];
-        for (var key in obj.data) {
-            params.push(key + '=' + obj.data[key]);
-        }
-        var postData = params.join('&');
-        if (obj.type.toUpperCase() === 'POST') {
-            xmlHttp.open(obj.type, obj.url, obj.async);
-            xmlHttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded;charset=utf-8');
-            xmlHttp.send(postData);
-        } else if (obj.type.toUpperCase() === 'GET') {
-            xmlHttp.open(obj.type, obj.url + '?' + postData, obj.async);
-            xmlHttp.send(null);
-        }
-        xmlHttp.onreadystatechange = function () {
-            if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
-                obj.success(xmlHttp.responseText);
-            } else {
-                obj.error(xmlHttp.responseText);
-            }
-        };
-    },
     //获取对象数组某些项
     //var arr=[{a:1,b:2,c:9},{a:2,b:3,c:5},{a:5,b:9},{a:4,b:2,c:5},{a:4,b:5,c:7}]
     //getOptionArray(arr,'a,c')
@@ -766,50 +711,6 @@ var CommonFun = {
         }
         return _arr;
     },
-    //8.数组扁平化
-    steamroller: function (arr) {
-        var newArr = [];
-        for (var i = 0; i < arr.length; i++) {
-            if (Array.isArray(arr[i])) {
-                // 如果是数组，调用(递归)steamroller 将其扁平化
-                // 然后再 push 到 newArr 中
-                newArr.push.apply(newArr, steamroller(arr[i]));
-            } else {
-                // 不是数组直接 push 到 newArr 中
-                newArr.push(arr[i]);
-            }
-        }
-        return newArr;
-    },
-    //另一种写法
-    //steamroller([1,2,[4,5,[1,23]]])
-    //[1, 2, 4, 5, 1, 23]
-    /*
-     * i=0 newArr.push(arr[i])  [1]
-     * i=1 newArr.push(arr[i])  [1,2]
-     * i=2 newArr = newArr.concat(steamroller(arr[i]));  执行到下面
-     * 第一次i=2进入后 i=0, newArr.push(arr[i]);  [4]
-     * 第一次i=2进入后 i=1, newArr.push(arr[i]);  [4，5]
-     *  * i=2 newArr = newArr.concat(steamroller(arr[i]));  执行到下面
-     * 第二次i=2进入后 i=0, newArr.push(arr[i]);  [1]
-     * 第二次i=2进入后 i=1, newArr.push(arr[i]);  [1，23]  执行到下面
-     * 第二次循环完，回到第一次进入后  newArr = newArr.concat(steamroller(arr[i]));  [4,5].concat([1,23])   [4,5,1,23]
-     * 然后回到第一次   [1,2].concat([4,5,1,23])
-     */
-//  steamroller: function (arr) {
-//      var newArr = [];
-//      for (var i = 0; i < arr.length; i++) {
-//          if (Array.isArray(arr[i])) {
-//              // 如果是数组，调用(递归)steamroller 将其扁平化
-//              // 然后再 push 到 newArr 中
-//              newArr = newArr.concat(steamroller(arr[i]));
-//          } else {
-//              // 不是数组直接 push 到 newArr 中
-//              newArr.push(arr[i]);
-//          }
-//      }
-//      return newArr;
-//  },
     //创建正则字符
     createKeyExp: function (strArr) {
         var str = "";
@@ -964,5 +865,5 @@ var CommonFun = {
         return _str;
     }
 }
-
+export default CommonFun;
 
