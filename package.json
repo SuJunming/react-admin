@@ -91,5 +91,8 @@
   },
   "eslintConfig": {
     "extends": "react-app"
+  },
+  "devDependencies": {
+    "babel-plugin-import": "^1.4.0"
   }
 }
