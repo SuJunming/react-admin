@@ -12,7 +12,7 @@
 
 <span style="color: rgb(184,49,47);">点击名称可跳转相关网站😄😄</span>
 
-- [react](https://facebook.github.io/react/)(<span style="color: rgb(243,121,52);">👍</span>)
+- [react](https://facebook.github.io/react/)<span style="color: rgb(243,121,52);">👍</span>
 - [react-router](https://react-guide.github.io/react-router-cn/)(<span style="color: rgb(243,121,52);">react路由👍</span>)
 - [antd](https://ant.design/index-cn)(<span style="color: rgb(243,121,52);">蚂蚁金服开源的react ui组件框架👍</span>)
 - [axios](https://github.com/mzabriskie/axios)(<span style="color: rgb(243,121,52);">http请求模块，可用于前端任何场景，很强大👍</span>)
