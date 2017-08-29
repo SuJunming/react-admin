@@ -41,7 +41,7 @@ class App extends Component {
                 minHeight: 280
               }}
             >
-              <RouterUrl />
+              <RouterUrl store={this.props.store}/>
             </Content>
           </Layout>
         </Layout>
