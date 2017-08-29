@@ -15,6 +15,9 @@
 - [react](https://facebook.github.io/react/)<span style="color: rgb(243,121,52);">👍</span>
 - [react-router](https://react-guide.github.io/react-router-cn/)(<span style="color: rgb(243,121,52);">react路由👍</span>)
 - [antd](https://ant.design/index-cn)(<span style="color: rgb(243,121,52);">蚂蚁金服开源的react ui组件框架👍</span>)
+- [redux](https://github.com/reactjs/redux)(<span style="color: rgb(243,121,52);">状态管理👍</span>)
+- [react-redux](https://github.com/reactjs/react-redux)(<span style="color: rgb(243,121,52);">react版本的redux👍</span>)
+- [redux-thunk](https://github.com/gaearon/redux-thunk)(<span style="color: rgb(243,121,52);">dispatch返回函数👍</span>)
 - [axios](https://github.com/mzabriskie/axios)(<span style="color: rgb(243,121,52);">http请求模块，可用于前端任何场景，很强大👍</span>)
 - 其他小细节省略
 
