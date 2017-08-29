@@ -5,16 +5,17 @@ import {
     Switch,
     Link,
 } from 'react-router-dom';
-import Buttons from '../components/UI/buttons';
+import Icon from '../components/UI/Icon';
+import Buttons from '../components/UI/Buttons';
+import App from '../App'
 export default class RouterUrl extends Component{
     render(){
-        return(
-            <BrowserRouter>
+        return( 
                 <Switch>
                     <Route exact path="/" component={Buttons} />
-                    <Route path='/Buttons' component={Buttons} />
+                    <Route path='/buttons' component={Buttons} />
+                    <Route path='/icon' component={Icon}/>
                 </Switch>
-            </BrowserRouter>
         )
     }
 }

@@ -24,7 +24,6 @@ class Nav extends Component {
       }
       render() {
           return(
-            <BrowserRouter>
             <Menu
             theme={this.state.theme}
             onClick={this.handleClick}
@@ -34,8 +33,8 @@ class Nav extends Component {
             mode="inline"
           >
             <SubMenu key="/Buttons" title={<span><Icon type="mail" /><span>UI</span></span>}>
-              <Menu.Item key="1"><Link to={`./Buttons`}>按钮</Link></Menu.Item>
-              <Menu.Item key="2">Option 2</Menu.Item>
+              <Menu.Item key="1"><Link to={`/buttons`}>按钮</Link></Menu.Item>
+              <Menu.Item key="2"><Link to={`/icon`}>icon</Link></Menu.Item>
               <Menu.Item key="3">Option 3</Menu.Item>
               <Menu.Item key="4">Option 4</Menu.Item>
             </SubMenu>
@@ -54,7 +53,6 @@ class Nav extends Component {
               <Menu.Item key="12">Option 12</Menu.Item>
             </SubMenu>
           </Menu>
-            </BrowserRouter>
         )
     }
 }

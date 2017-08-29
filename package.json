@@ -94,6 +94,7 @@
   },
   "devDependencies": {
     "babel-plugin-import": "^1.4.0",
+    "babel-preset-stage-0": "^6.24.1",
     "react-redux": "^5.0.6",
     "redux": "^3.7.2",
     "redux-thunk": "^2.2.0"
