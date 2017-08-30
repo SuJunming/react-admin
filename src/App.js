@@ -33,16 +33,7 @@ class App extends Component {
                 style={{ fontSize: 20 }}
               />
             </Header>
-            <Content
-              style={{
-                margin: "24px 16px",
-                padding: 24,
-                background: "#fff",
-                minHeight: 280
-              }}
-            >
               <RouterUrl/>
-            </Content>
           </Layout>
         </Layout>
       </div>
