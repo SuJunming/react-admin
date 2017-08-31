@@ -19,6 +19,7 @@ class App extends Component {
     return (
       <div className="App">
         <Layout style={{ height: "100%" }}>
+        <div className="logo" />
           <Sider trigger={null} collapsible collapsed={this.state.collapsed}>
             <Nav />
           </Sider>
@@ -34,8 +35,8 @@ class App extends Component {
               />
             </Header>
               <RouterUrl/>
-          </Layout>
-        </Layout>
+              </Layout>
+              </Layout>
       </div>
     );
   }
