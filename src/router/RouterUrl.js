@@ -14,8 +14,8 @@ export default class RouterUrl extends Component{
         return( 
                 <Switch>
                     <Route exact path="/" component={Buttons} />
-                    <Route path='/buttons' component={Buttons} />
-                    <Route path='/icon' component={Icon}/>
+                    <Route path='/ui/buttons' component={Buttons} />
+                    <Route path='/ui/icon' component={Icon}/>
                 </Switch>
         )
     }

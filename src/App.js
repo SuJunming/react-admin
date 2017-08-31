@@ -1,26 +1,30 @@
 import React, { Component } from "react";
 import Nav from "./router/Nav";
 import RouterUrl from "./router/RouterUrl";
+import CommonFun from './javascript/commonFun';
 import { Layout, Menu, Breadcrumb, Icon, Button } from "antd";
 import "./App.css";
 const { Header, Sider, Content } = Layout;
 const SubMenu = Menu.SubMenu;
 class App extends Component {
   state = {
-    collapsed: false
+    collapsed: false,
   };
+
   toggle = () => {
     this.setState({
       collapsed: !this.state.collapsed
     });
   };
   render() {
+    console.log("公共函数:");
+    console.log(CommonFun);
     return (
       <div className="App">
         <Layout style={{ height: "100%" }}>
         <Sider trigger={null} collapsible collapsed={this.state.collapsed}>
           <div className='logo'/>
-            <Nav />
+            <Nav/>
           </Sider>
           <Layout>
             <Header
