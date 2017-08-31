@@ -33,9 +33,10 @@
 #components-layout-demo-custom-trigger .trigger:hover {
   color: #108ee9;
 }
-
-#components-layout-demo-custom-trigger .logo {
-  height: 32px;
+ .logo {
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
   background: #333;
   border-radius: 6px;
   margin: 16px;
