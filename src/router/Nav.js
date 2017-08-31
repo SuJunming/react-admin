@@ -24,11 +24,11 @@ class Nav extends Component {
          * @param 获取url 设置当前Select Menu
          */
           let url=window.location.href;
-          const ip=url.substr(0, url.indexOf('/', url.indexOf('://',0)+3)).toString();
-          let selected=url.replace(ip,"");
+          const selected=url.replace(url.substr(0, url.indexOf('/', url.indexOf('://',0)+3)).toString(),"");
+          let Open=selected.substring(0,selected.indexOf('/',selected.indexOf('/')+1));
           this.setState({
-            open:selected.substring(0,selected.indexOf('/',selected.indexOf('/')+1)),
-            current:selected
+            open:Open==''?'/ui':Open,
+            current:selected=='/'?'/ui/buttons':selected
           })
       }
       openMenu = data => {
