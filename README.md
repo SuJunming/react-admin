@@ -43,13 +43,21 @@
 --- package.json                                    
 ```
 ### 安装运行
-##### 1.下载或克隆项目源码
+##### 一.npm快速概述
+```js
+npm i rc-admin
+cd rc-admin
+npm i
+npm start
+```
+or
+##### 1.克隆项目
 ```js
 git clone https://github.com/SuJunming/rc-admin.git
 ```
 ##### 2.npm安装相关包文件(国内建议增加淘宝镜像源，不然很慢，你懂的😁)
 ```js
-npm i rc-admin
+npm i
 ```
 ##### 3.启动项目
 ```js
