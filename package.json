@@ -1,7 +1,7 @@
 {
-  "name": "react-tools",
+  "name": "rc-admin",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "antd": "^2.12.6",
     "autoprefixer": "7.1.2",
