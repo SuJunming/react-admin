@@ -5,7 +5,7 @@
 ### 前言
   启动和打包的时间都稍长，请耐心等待
 
-- [GitHub地址](https://github.com/sujunming/react-tools)
+- [GitHub地址](https://github.com/SuJunming/rc-admin)
 
 ### 依赖模块
 <span style="color: rgb(184,49,47);">项目是用create-react-app创建的，主要还是列出新加的功能依赖包</span>
