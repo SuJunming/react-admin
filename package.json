@@ -1,6 +1,6 @@
 {
   "name": "rc-admin",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "private": false,
   "dependencies": {
     "antd": "^2.12.6",
