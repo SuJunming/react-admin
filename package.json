@@ -1,8 +1,10 @@
 {
   "name": "rc-admin",
-  "version": "0.1.9",
+  "version": "0.2.0",
   "private": false,
-  "files": ["*"],
+  "files": [
+    "*"
+  ],
   "dependencies": {
     "antd": "^2.12.6",
     "autoprefixer": "7.1.2",
