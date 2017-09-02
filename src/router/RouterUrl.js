@@ -7,7 +7,7 @@ import {
     Link,
 } from 'react-router-dom';
 import Icon from '../components/UI/Icon';
-import Buttons from '../components/UI/Buttons';
+import Buttons from '../components/UI/buttons';
 import App from '../App'
 export default class RouterUrl extends Component{
     render(){
