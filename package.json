@@ -3,7 +3,13 @@
   "version": "0.2.0",
   "private": false,
   "files": [
-    "*"
+    "config",
+    "public",
+    "scripts",
+    "src",
+    ".env",
+    ".gitgnore",
+    "package.json"
   ],
   "dependencies": {
     "antd": "^2.12.6",
