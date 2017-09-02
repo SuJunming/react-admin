@@ -2,15 +2,6 @@
   "name": "rc-admin",
   "version": "0.2.1",
   "private": false,
-  "files": [
-    "config",
-    "public",
-    "scripts",
-    "src",
-    ".env",
-    ".gitgnore",
-    "package.json"
-  ],
   "dependencies": {
     "antd": "^2.12.6",
     "autoprefixer": "7.1.2",
