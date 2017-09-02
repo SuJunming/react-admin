@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {Icon} from 'antd';
-class Icon extends Component {
+class Icons extends Component {
     render() {
         return (
             <div>
@@ -10,4 +10,4 @@ class Icon extends Component {
     }
 }
 
-export default Icon;
+export default Icons;
