@@ -6,7 +6,7 @@ import {
     Switch,
     Link,
 } from 'react-router-dom';
-import Icon from '../components/UI/Icons';
+import Icons from '../components/UI/Icons';
 import Buttons from '../components/UI/Buttons';
 import App from '../App'
 export default class RouterUrl extends Component{
