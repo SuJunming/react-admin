@@ -4,7 +4,7 @@
 ### 前言
   欢迎使用后台管理系统解决方案
   本项目是针对后台人员or外包人员or快速搭建后台管理系统创建
-- [package on npm](https://www.npmjs.com/package/rc-admin)
+- [package on npm地址](https://www.npmjs.com/package/rc-admin)
 - [GitHub地址](https://github.com/SuJunming/rc-admin)
 
 ### 依赖模块
