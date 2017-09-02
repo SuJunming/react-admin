@@ -1,6 +1,6 @@
 {
   "name": "rc-admin",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "private": false,
   "dependencies": {
     "antd": "^2.12.6",
@@ -99,5 +99,5 @@
     "redux": "^3.7.2",
     "redux-thunk": "^2.2.0"
   },
-  "files":"*"
+  "files": "*"
 }
