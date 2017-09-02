@@ -4,6 +4,7 @@
 ### 前言
   欢迎使用后台管理系统解决方案
   本项目是针对后台人员or外包人员or快速搭建后台管理系统创建
+- [package on npm地址](https://www.npmjs.com/package/rc-admin)
 - [GitHub地址](https://github.com/SuJunming/rc-admin)
 
 ### 依赖模块
@@ -42,6 +43,14 @@
 --- package.json                                    
 ```
 ### 安装运行
+##### npm快速概述(国内建议增加淘宝镜像源，不然很慢，你懂的😁)
+```js
+npm i rc-admin
+cd rc-admin
+npm i
+npm start
+```
+or
 ##### 1.克隆项目
 ```js
 git clone https://github.com/SuJunming/rc-admin.git
