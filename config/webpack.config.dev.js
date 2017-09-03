@@ -119,7 +119,6 @@ module.exports = {
             options: {
               formatter: eslintFormatter,
               eslintPath: require.resolve('eslint'),
-              
             },
             loader: require.resolve('eslint-loader'),
           },
@@ -149,7 +148,8 @@ module.exports = {
             loader: require.resolve('babel-loader'),
             options: {
               plugins: [
-                ['import', [{ libraryName: 'antd', style: 'css' }]],  // import less
+                ['transform-decorators-legacy'],
+                ['import', [{ libraryName: 'antd', style: 'css' }]]  // import less
             ],
               // This is a feature of `babel-loader` for webpack (not Babel itself).
               // It enables caching results in ./node_modules/.cache/babel-loader/

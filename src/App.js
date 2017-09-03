@@ -10,6 +10,7 @@ import CommonFun from './javascript/commonFun';
 import "./App.css";
 const { Header, Sider, Content,Footer } = Layout;
 const SubMenu = Menu.SubMenu;
+@connect(mapStateToProps,mapDispatchToProps)
 class App extends Component {
   state = {
     collapsed: false,
@@ -62,4 +63,4 @@ const mapDispatchToProps = dispatch => ({
   receiveData: bindActionCreators(receiveData, dispatch)
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default App;
