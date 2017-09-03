@@ -1,8 +1,11 @@
 import React, { Component } from "react";
+import { Layout, Menu, Breadcrumb, Icon, Button } from "antd";
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import { receiveData } from './action';
 import Nav from "./router/Nav";
 import RouterUrl from "./router/RouterUrl";
 import CommonFun from './javascript/commonFun';
-import { Layout, Menu, Breadcrumb, Icon, Button } from "antd";
 import "./App.css";
 const { Header, Sider, Content } = Layout;
 const SubMenu = Menu.SubMenu;
@@ -17,6 +20,7 @@ class App extends Component {
     });
   };
   render() {
+    console.log(this.props.auth);
     console.log("公共函数:");
     console.log(CommonFun);
     return (
@@ -44,4 +48,12 @@ class App extends Component {
     );
   }
 }
-export default App;
+const mapStateToProps = state => {
+  const { auth = {data: {}} } = state.httpData;
+  return {auth};
+};
+const mapDispatchToProps = dispatch => ({
+  receiveData: bindActionCreators(receiveData, dispatch)
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
