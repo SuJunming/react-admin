@@ -54,8 +54,8 @@ class Nav extends Component {
             mode="inline"
           >
             <SubMenu key="/ui" title={<span><Icon type="mail" /><span>ui</span></span>}>
-              <Menu.Item key="/ui/buttons"><Link to={`/ui/buttons`}>button</Link></Menu.Item>
-              <Menu.Item key="/ui/icon"><Link to={`/ui/icon`}>icon</Link></Menu.Item>
+              <Menu.Item key="/ui/buttons"><Link to={`/ui/buttons`}>buttons</Link></Menu.Item>
+              <Menu.Item key="/ui/icons"><Link to={`/ui/icons`}>icons</Link></Menu.Item>
             </SubMenu>
           </Menu>
         )
