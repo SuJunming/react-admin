@@ -1,13 +1,14 @@
 import React, { Component } from "react";
 import { Layout, Menu, Breadcrumb, Icon, Button } from "antd";
 import { bindActionCreators } from 'redux';
+import { BrowserRouter } from "react-router-dom";
 import { connect } from 'react-redux';
 import { receiveData } from './action';
 import Nav from "./router/Nav";
 import RouterUrl from "./router/RouterUrl";
 import CommonFun from './javascript/commonFun';
 import "./App.css";
-const { Header, Sider, Content } = Layout;
+const { Header, Sider, Content,Footer } = Layout;
 const SubMenu = Menu.SubMenu;
 class App extends Component {
   state = {
@@ -24,6 +25,7 @@ class App extends Component {
     console.log("公共函数:");
     console.log(CommonFun);
     return (
+      <BrowserRouter>
       <div className="App">
         <Layout style={{ height: "100%" }}>
         <Sider trigger={null} collapsible collapsed={this.state.collapsed}>
@@ -42,9 +44,13 @@ class App extends Component {
               />
             </Header>
               <RouterUrl/>
+              <Footer style={{ textAlign:'center' }}>
+              rc-Admin ©2017 Created by 827606400@qq.com
+            </Footer>
               </Layout>
               </Layout>
       </div>
+      </BrowserRouter>
     );
   }
 }
