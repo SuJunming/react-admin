@@ -44,7 +44,7 @@
 --- package.json                                    
 ```
 ### 安装运行
-or
+
 ##### 1.克隆项目
 ```js
 git clone https://github.com/SuJunming/rc-admin.git
