@@ -1,8 +1,16 @@
 import React, { Component } from "react";
 import { Button, Layout, Row, Col,Icon  } from "antd";
+import NProgress from 'nprogress';
+import 'nprogress/nprogress.css';
 const { Content } = Layout;
 const ButtonGroup = Button.Group;
 class Buttons extends Component {
+  componentWillMount = () => {
+    NProgress.start();
+  }
+  componentDidMount = () => {
+    NProgress.done();
+  }
   render() {
     return (
       <div>

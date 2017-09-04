@@ -10,8 +10,8 @@ export default class RouterUrl extends Component{
     render(){
         return( 
                 <Switch>
-                    <Route exact path="/" component={Buttons} />
-                    <Route path='/ui/buttons' component={Buttons} />
+                    <Route exact path="/" component={Buttons}/>
+                    <Route path='/ui/buttons' component={Buttons}/>
                     <Route path='/ui/icons' component={Icons}/>
                 </Switch>
         )

@@ -3,7 +3,7 @@ import {
     Link,
 } from 'react-router-dom';
 import { Menu, Icon } from 'antd';
-import '../App.css'
+import '../App.css';
 const SubMenu = Menu.SubMenu;
 class Nav extends Component {
     state = {
