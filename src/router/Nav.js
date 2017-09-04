@@ -1,11 +1,8 @@
 import React, { Component } from 'react';
 import {
-    BrowserRouter,
-    Route,
     Link,
 } from 'react-router-dom';
-import CommonFun from '../javascript/commonFun';
-import { Menu, Icon, Switch } from 'antd';
+import { Menu, Icon } from 'antd';
 import '../App.css'
 const SubMenu = Menu.SubMenu;
 class Nav extends Component {
@@ -27,8 +24,8 @@ class Nav extends Component {
           const selected=url.replace(url.substr(0, url.indexOf('/', url.indexOf('://',0)+3)).toString(),"");
           let Open=selected.substring(0,selected.indexOf('/',selected.indexOf('/')+1));
           this.setState({
-            open:Open==''?'/ui':Open,
-            current:selected=='/'?'/ui/buttons':selected
+            open:Open===''?'/ui':Open,
+            current:selected==='/'?'/ui/buttons':selected
           })
       }
       openMenu = data => {

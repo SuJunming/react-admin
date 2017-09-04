@@ -1,16 +1,22 @@
 import React, { Component } from "react";
-import { Layout, Menu, Breadcrumb, Icon, Button } from "antd";
+import { Layout, Icon } from "antd";
 import { bindActionCreators } from 'redux';
 import { BrowserRouter } from "react-router-dom";
 import { connect } from 'react-redux';
 import { receiveData } from './action';
 import Nav from "./router/Nav";
 import RouterUrl from "./router/RouterUrl";
-import CommonFun from './javascript/commonFun';
+import {trim} from './javascript/commonFun';
 import "./App.css";
-const { Header, Sider, Content,Footer } = Layout;
-const SubMenu = Menu.SubMenu;
-@connect(mapStateToProps,mapDispatchToProps)
+const { Header, Sider,Footer } = Layout
+const mapStateToProps = state => {
+  const { Data = {data: {}} } = state.defaultData;
+  return {Data};
+};
+const mapDispatchToProps = dispatch => ({
+  receiveData: bindActionCreators(receiveData, dispatch)
+});
+@connect(mapStateToProps,mapDispatchToProps) 
 class App extends Component {
   state = {
     collapsed: false,
@@ -22,9 +28,11 @@ class App extends Component {
     });
   };
   render() {
-    console.log(this.props.auth);
-    console.log("公共函数:");
-    console.log(CommonFun);
+    console.log('初始化redux-state:');
+    console.log(this.props.Data);
+    console.log('公共函数一:去除空格(另外几十种方法commonFun查看)');
+    let a=" a   "
+    console.log(trim(a,1));
     return (
       <BrowserRouter>
       <div className="App">
@@ -55,12 +63,4 @@ class App extends Component {
     );
   }
 }
-const mapStateToProps = state => {
-  const { auth = {data: {}} } = state.httpData;
-  return {auth};
-};
-const mapDispatchToProps = dispatch => ({
-  receiveData: bindActionCreators(receiveData, dispatch)
-});
-
 export default App;

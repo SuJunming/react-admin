@@ -18,7 +18,7 @@
 - [react-redux](https://github.com/reactjs/react-redux)(<span style="color: rgb(243,121,52);">react版本的redux👍</span>)
 - [redux-thunk](https://github.com/gaearon/redux-thunk)(<span style="color: rgb(243,121,52);">dispatch返回函数👍</span>)
 - [axios](https://github.com/mzabriskie/axios)(<span style="color: rgb(243,121,52);">http请求模块，可用于前端任何场景，很强大👍</span>)
-- [transform-decorators-legacy](https://www.npmjs.com/package/babel-plugin-transform-decorators-legacy)(<span style="color: rgb(243,121,52);">@装饰符 很强大👍</span>)
+- [transform-decorators-legacy](https://www.npmjs.com/package/babel-plugin-transform-decorators-legacy)(<span style="color: rgb(243,121,52);">@ES7装饰符 很强大👍</span>)
 - 其他小细节省略
 
 ### 功能模块

@@ -1,6 +1,5 @@
-var CommonFun = {
     //去除空格  type 1-所有空格  2-前后空格  3-前空格 4-后空格
-    trim: function (str, type) {
+    export const trim=function (str, type) {
         switch (type) {
             case 1:
                 return str.replace(/\s+/g, "");
@@ -13,7 +12,7 @@ var CommonFun = {
             default:
                 return str;
         }
-    },
+    }
     /*type
      1:首字母大写
      2：首页母小写
@@ -23,7 +22,7 @@ var CommonFun = {
      * */
     //changeCase('asdasd',1)
     //Asdasd
-    changeCase: function (str, type) {
+    export const changeCase=function (str, type) {
         function ToggleCase(str) {
             var itemText = ""
             str.split("").forEach(
@@ -58,26 +57,26 @@ var CommonFun = {
             default:
                 return str;
         }
-    },
+    }
     //字符串循环复制
     //repeatStr(str->字符串, count->次数)
     //repeatStr('123',3)
     //"123123123"
-    repeatStr: function (str, count) {
+    export const repeatStr=function (str, count) {
         var text = '';
         for (var i = 0; i < count; i++) {
             text += str;
         }
         return text;
-    },
+    }
     //字符串替换(字符串,要替换的字符或者正则表达式（不要写g）,替换成什么)
-    replaceAll: function (str, AFindText, ARepText) {
+    export const replaceAll=function (str, AFindText, ARepText) {
         var raRegExp = new RegExp(AFindText, "g");
         return str.replace(raRegExp, ARepText);
-    },
+    }
     //字符替换*
     //replaceStr(字符串,字符格式, 替换方式,替换的字符（默认*）)
-    replaceStr: function (str, regArr, type, ARepText) {
+    export const replaceStr=function (str, regArr, type, ARepText) {
         var regtext = '',
             Reg = null,
             replaceText = ARepText || '*';
@@ -101,7 +100,7 @@ var CommonFun = {
         }
         //replaceStr('1asd88465asdwqe3',[5],0)
         //*****8465asdwqe3
-        else if (regArr.length === 1 && type == 0) {
+        else if (regArr.length === 1 && type === 0) {
             regtext = '(^\\w{' + regArr[0] + '})'
             Reg = new RegExp(regtext);
             var replaceCount = this.repeatStr(replaceText, regArr[0]);
@@ -109,18 +108,18 @@ var CommonFun = {
         }
         //replaceStr('1asd88465asdwqe3',[5],1,'+')
         //"1asd88465as+++++"
-        else if (regArr.length === 1 && type == 1) {
+        else if (regArr.length === 1 && type === 1) {
             regtext = '(\\w{' + regArr[0] + '}$)'
             Reg = new RegExp(regtext);
             var replaceCount = this.repeatStr(replaceText, regArr[0]);
             return str.replace(Reg, replaceCount)
         }
-    },
+    }
     //检测字符串
     //checkType('165226226326','phone')
     //false
     //大家可以根据需要扩展
-    checkType: function (str, type) {
+    export const checkType=function (str, type) {
         switch (type) {
             case 'email':
                 return /^[\w-]+(\.[\w-]+)*@[\w-]+(\.[\w-]+)+$/.test(str);
@@ -143,11 +142,11 @@ var CommonFun = {
             default:
                 return true;
         }
-    },
+    }
     //检测密码强度
     //checkPwd('12asdASAD')
     //3(强度等级为3)
-    checkPwd: function (str) {
+    export const checkPwd=function (str) {
         var nowLv = 0;
         if (str.length < 6) {
             return nowLv
@@ -165,7 +164,7 @@ var CommonFun = {
             nowLv++
         }
         return nowLv;
-    },
+    }
     //随机码
     //count取值范围0-36
 
@@ -178,73 +177,73 @@ var CommonFun = {
     //randomWord(36)
     //"83vhdx10rmjkyb9"
 
-    randomWord: function (count) {
+    export const randomWord=function (count) {
         return Math.random().toString(count).substring(2);
-    },
+    }
 
     //查找字符串
-    countStr: function (str, strSplit) {
+    export const countStr=function (str, strSplit) {
         return str.split(strSplit).length - 1
-    },
+    }
     //var strTest='sad44654blog5a1sd67as9dablog4s5d16zxc4sdweasjkblogwqepaskdkblogahseiuadbhjcibloguyeajzxkcabloguyiwezxc967'
     //countStr(strTest,'blog')
     //6
 
     /*数组*/
     //数组去重
-    removeRepeatArray: function (arr) {
+    export const removeRepeatArray=function (arr) {
         return arr.filter(function (item, index, self) {
-            return self.indexOf(item) == index;
+            return self.indexOf(item) === index;
         });
         //es6
         //return Array.from(new Set(arr))
-    },
+    }
     //数组顺序打乱
-    upsetArr: function (arr) {
+    export const upsetArr=function (arr) {
         return arr.sort(function () {
             return Math.random() - 0.5
         });
-    },
+    }
 
     //数组最大值
     //这一块的封装，主要是针对数字类型的数组
-    maxArr: function (arr) {
+    export const maxArr=function (arr) {
         return Math.max.apply(null, arr);
-    },
+    }
     //数组最小值
-    minArr: function (arr) {
+    export const minArr=function (arr) {
         return Math.min.apply(null, arr);
-    },
+    }
 
     //这一块的封装，主要是针对数字类型的数组
     //求和
-    sumArr: function (arr) {
+    export const sumArr=function (arr) {
         return arr.reduce(function(pre,cur){return pre+cur})
-    },
+    }
 
     //平均值,小数点可能会有很多位，这里不做处理，处理了使用就不灵活了！
-    covArr: function (arr) {
+    export const covArr=function (arr) {
         return this.sumArr(arr) / arr.length;
-    },
+    }
     //从数组中随机获取元素
-    randomOne: function (arr) {
+    export const randomOne=function (arr) {
         return arr[Math.floor(Math.random() * arr.length)];
-    },
+    }
 
     //回数组（字符串）一个元素出现的次数
     //getEleCount('asd56+asdasdwqe','a')
     //3
     //getEleCount([1,2,3,4,5,66,77,22,55,22],22)
     //2
-    getEleCount: function (obj, ele) {
+    export const getEleCount=function (obj, ele) {
         var num = 0;
         for (var i = 0, len = obj.length; i < len; i++) {
-            if (ele == obj[i]) {
+            if (ele === obj[i]) {
                 num++;
             }
         }
         return num;
-    },
+    }
 
     //返回数组（字符串）出现最多的几次元素和出现次数
     //arr, rank->长度，默认为数组长度，ranktype，排序方式，默认降序
@@ -256,7 +255,7 @@ var CommonFun = {
     //传参（ranktype=1,rank=null），升序返回所有元素出现次数
     //getCount([1,2,3,1,2,5,2,4,1,2,6,2,1,3,2],3,1)
     //传参（rank=3，ranktype=1），只返回出现次数排序（升序）前三的
-    getCount: function (arr, rank, ranktype) {
+    export const getCount=function (arr, rank, ranktype) {
         var obj = {},
             k, arr1 = []
         //记录每一元素出现的次数
@@ -282,17 +281,17 @@ var CommonFun = {
         }
         var rank1 = rank || arr1.length;
         return arr1.slice(0, rank1);
-    },
+    }
 
     //得到n1-n2下标的数组
     //getArrayNum([0,1,2,3,4,5,6,7,8,9],5,9)
     //[5, 6, 7, 8, 9]
     //getArrayNum([0,1,2,3,4,5,6,7,8,9],2) 不传第二个参数,默认返回从n1到数组结束的元素
     //[2, 3, 4, 5, 6, 7, 8, 9]
-    getArrayNum: function (arr, n1, n2) {
+    export const getArrayNum=function (arr, n1, n2) {
         var arr1=arr.slice(n1,n2);
         return arr1;
-    },
+    }
 
     //筛选数组
     //删除值为'val'的数组元素
@@ -300,14 +299,14 @@ var CommonFun = {
     //["aaa"]   带有'test'的都删除
     //removeArrayForValue(['test','test1','test2','test','aaa'],'test')
     //["test1", "test2", "aaa"]  //数组元素的值全等于'test'才被删除
-    removeArrayForValue: function (arr, val, type) {
+    export const removeArrayForValue=function (arr, val, type) {
         arr.filter(function (item) {
             return type === '%' ? item.indexOf(val) !== -1 : item !== val
         })
-    },
+    }
     /*对象及其他*/
     //适配rem
-    getFontSize: function () {
+    export const getFontSize=function () {
         var doc = document,
             win = window;
         var docEl = doc.documentElement,
@@ -326,11 +325,11 @@ var CommonFun = {
         win.addEventListener(resizeEvt, recalc, false);
         //文档加载完成时，触发函数
         doc.addEventListener('DOMContentLoaded', recalc, false);
-    },
+    }
     //到某一个时间的倒计时
     //getEndTime('2017/7/22 16:0:0')
     //"剩余时间6天 2小时 28 分钟20 秒"
-    getEndTime: function (endTime) {
+    export const getEndTime=function (endTime) {
         var startDate = new Date(); //开始时间，当前时间
         var endDate = new Date(endTime); //结束时间，需传入时间参数
         var t = endDate.getTime() - startDate.getTime(); //时间差的毫秒数
@@ -345,9 +344,9 @@ var CommonFun = {
             s = Math.floor(t / 1000 % 60);
         }
         return "剩余时间" + d + "天 " + h + "小时 " + m + " 分钟" + s + " 秒";
-    },
+    }
     //随进产生颜色
-    randomColor: function () {
+    export const randomColor=function () {
         //randomNumber是下面定义的函数
         //写法1
         //return 'rgb(' + this.randomNumber(255) + ',' + this.randomNumber(255) + ',' + this.randomNumber(255) + ')';
@@ -361,9 +360,9 @@ var CommonFun = {
         //color+='0123456789abcdef'[_index];
         //}
         //return color;
-    },
+    }
     //随机返回一个范围的数字
-    randomNumber: function (n1, n2) {
+    export const randomNumber=function (n1, n2) {
         //randomNumber(5,10)
         //返回5-10的随机整数，包括5，10
         if (arguments.length === 2) {
@@ -379,11 +378,11 @@ var CommonFun = {
         else {
             return Math.round(Math.random() * 255)
         }
-    },
+    }
     //设置url参数
     //setUrlPrmt({'a':1,'b':2})
     //a=1&b=2
-    setUrlPrmt: function (obj) {
+    export const setUrlPrmt=function (obj) {
         var _rs = [];
         for (var p in obj) {
             if (obj[p] != null && obj[p] != '') {
@@ -391,18 +390,18 @@ var CommonFun = {
             }
         }
         return _rs.join('&');
-    },
+    }
     //获取url参数
     //getUrlPrmt('segmentfault.com/write?draftId=122000011938')
     //Object{draftId: "122000011938"}
-    getUrlPrmt: function (url) {
+    export const getUrlPrmt=function (url) {
         url = url ? url : window.location.href;
         var _pa = url.substring(url.indexOf('?') + 1),
             _arrS = _pa.split('&'),
             _rs = {};
         for (var i = 0, _len = _arrS.length; i < _len; i++) {
             var pos = _arrS[i].indexOf('=');
-            if (pos == -1) {
+            if (pos === -1) {
                 continue;
             }
             var name = _arrS[i].substring(0, pos),
@@ -410,7 +409,7 @@ var CommonFun = {
             _rs[name] = value;
         }
         return _rs;
-    },
+    }
 
     //现金额大写转换函数
     //upDigit(168752632)
@@ -419,7 +418,7 @@ var CommonFun = {
     //"人民币壹仟陆佰捌拾贰元整"
     //upDigit(-1693)
     //"欠人民币壹仟陆佰玖拾叁元整"
-    upDigit: function (n) {
+    export const upDigit=function (n) {
         var fraction = ['角', '分', '厘'];
         var digit = ['零', '壹', '贰', '叁', '肆', '伍', '陆', '柒', '捌', '玖'];
         var unit = [
@@ -444,11 +443,11 @@ var CommonFun = {
             //s = p + unit[0][i] + s;
         }
         return head + s.replace(/(零.)*零元/, '元').replace(/(零.)+/g, '零').replace(/^整$/, '零元整');
-    },
+    }
     //清除对象中值为空的属性
     //filterParams({a:"",b:null,c:"010",d:123})
     //Object {c: "010", d: 123}
-    filterParams: function (obj) {
+    export const filterParams=function (obj) {
         var _newPar = {};
         for (var key in obj) {
             if ((obj[key] === 0 || obj[key]) && obj[key].toString().replace(/(^\s*)|(\s*$)/g, '') !== '') {
@@ -456,43 +455,43 @@ var CommonFun = {
             }
         }
         return _newPar;
-    },
+    }
     //cookie
     //设置cookie
-    setCookie: function (name, value, iDay) {
+    export const setCookie=function (name, value, iDay) {
         var oDate = new Date();
         oDate.setDate(oDate.getDate() + iDay);
         document.cookie = name + '=' + value + ';expires=' + oDate;
-    },
+    }
     //获取cookie
-    getCookie: function (name) {
+    export const getCookie=function (name) {
         var arr = document.cookie.split('; ');
         for (var i = 0; i < arr.length; i++) {
             var arr2 = arr[i].split('=');
-            if (arr2[0] == name) {
+            if (arr2[0] === name) {
                 return arr2[1];
             }
         }
         return '';
-    },
+    }
     //删除cookie
-    removeCookie: function (name) {
+    export const removeCookie=function (name) {
         this.setCookie(name, 1, -1);
-    },
+    }
     /*DOM*/
     //检测对象是否有哪个类名
-    hasClass: function (obj, classStr) {
+    export const hasClass=function (obj, classStr) {
         if(obj.className&&this.trim(obj.className,1)!==""){
             var arr = obj.className.split(/\s+/); //这个正则表达式是因为class可以有多个,判断是否包含
-            return (arr.indexOf(classStr) == -1) ? false : true;
+            return (arr.indexOf(classStr) === -1) ? false : true;
         }
         else{
             return false;
         }
 
-    },
+    }
     //添加类名
-    addClass: function (obj, classStr) {
+    export const addClass=function (obj, classStr) {
         if((this.istype(obj,'array')||this.istype(obj,'elements'))&&obj.length>=1){
             for(var i=0,len=obj.length;i<len;i++){
                 if (!this.hasClass(obj[i], classStr)) {
@@ -505,9 +504,9 @@ var CommonFun = {
                 obj.className += " " + classStr;
             }
         }
-    },
+    }
     //删除类名
-    removeClass: function (obj, classStr) {
+    export const removeClass=function (obj, classStr) {
         if((this.istype(obj,'array')||this.istype(obj,'elements'))&&obj.length>1){
             for(var i=0,len=obj.length;i<len;i++){
                 if (this.hasClass(obj[i], classStr)) {
@@ -522,14 +521,14 @@ var CommonFun = {
                 obj.className = obj.className.replace(reg, '');
             }
         }
-    },
+    }
     //替换类名("被替换的类名","替换的类名")
-    replaceClass: function (obj, newName, oldName) {
+    export const replaceClass=function (obj, newName, oldName) {
         this.removeClass(obj, oldName);
         this.addClass(obj, newName);
-    },
+    }
     //获取兄弟节点
-    siblings: function (obj,opt) {
+    export const siblings=function (obj,opt) {
         var a = []; //定义一个数组，用来存o的兄弟元素
         var p = obj.previousSibling;
         while (p) { //先取o的哥哥们 判断有没有上一个哥哥元素，如果有则往下执行 p表示previousSibling
@@ -560,28 +559,28 @@ var CommonFun = {
             return b;
         }
         return a;
-    },
+    }
     //设置样式
-    css: function (obj, json) {
+    export const css=function (obj, json) {
         for (var attr in json) {
             obj.style[attr] = json[attr];
         }
-    },
+    }
     //设置文本内容
-    html: function (obj) {
-        if (arguments.length == 0) {
+    export const html=function (obj) {
+        if (arguments.length === 0) {
             return this.innerHTML;
-        } else if (arguments.length == 1) {
+        } else if (arguments.length === 1) {
             this.innerHTML = arguments[0];
         }
-    },
+    }
     //显示隐藏
-    show: function (obj) {
+    export const show=function (obj) {
         obj.style.display = "";
-    },
-    hide: function (obj) {
+    }
+    export const hide=function (obj) {
         obj.style.display = "none";
-    },
+    }
     //获取对象数组某些项
     //var arr=[{a:1,b:2,c:9},{a:2,b:3,c:5},{a:5,b:9},{a:4,b:2,c:5},{a:4,b:5,c:7}]
     //getOptionArray(arr,'a,c')
@@ -589,7 +588,7 @@ var CommonFun = {
     //getOptionArray(arr,'a',1)
     //getOptionArray(arr,'b',1)
     //[2, 3, 9, 2, 5]
-    getOptionArray: function (arr, keys, type) {
+    export const getOptionArray=function (arr, keys, type) {
         var newArr = []
         if (!keys) {
             return arr
@@ -610,14 +609,14 @@ var CommonFun = {
             newArr.push(newArrOne);
         }
         return newArr
-    },
+    }
     //排除数组某些项
     //var arr=[{a:1,b:2,c:9},{a:2,b:3,c:5},{a:5,b:9},{a:4,b:2,c:5},{a:4,b:5,c:7}]
     //filterOptionArray(arr,'a')
     //[{b:2,c:9},{b:3,c:5},{b:9},{b:2,c:5},{b:5,c:7}]
     //filterOptionArray(arr,'a,c')
     //[{b:2},{b:3},{b:9},{b:2},{b:5}]
-    filterOptionArray: function (arr, keys) {
+    export const filterOptionArray=function (arr, keys) {
         var newArr = []
         var _keys = keys.split(','), newArrOne = {};
         for (var i = 0, len = arr.length; i < len; i++) {
@@ -631,9 +630,9 @@ var CommonFun = {
             newArr.push(newArrOne);
         }
         return newArr
-    },
+    }
     //图片没加载出来时用一张图片代替
-    aftLoadImg: function (obj, url, cb) {
+    export const aftLoadImg=function (obj, url, cb) {
         var oImg = new Image(),_this=this;
         oImg.src = url;
         oImg.onload = function () {
@@ -642,7 +641,7 @@ var CommonFun = {
                 cb(obj);
             }
         }
-    },
+    }
     //图片滚动懒加载
     //@className {string} 要遍历图片的类名
     //@num {number} 距离多少的时候开始加载 默认 0
@@ -660,7 +659,7 @@ var CommonFun = {
     //		loadImg('load-img',100);
     //		}
     //}
-    loadImg: function (className, num) {
+    export const loadImg=function (className, num) {
         var _className = className || 'ec-load-img', _num = num || 0,_this=this;
         var oImgLoad = document.getElementsByClassName(_className);
         for (var i = 0, len = oImgLoad.length; i < len; i++) {
@@ -695,11 +694,11 @@ var CommonFun = {
                 })(i);
             }
         }
-    },
+    }
     //7.对象数组的排序
     //var arr=[{a:1,b:2,c:9},{a:2,b:3,c:5},{a:5,b:9},{a:4,b:2,c:5},{a:4,b:5,c:7}]
     //arraySort(arr2,'a,b')  a是第一排序条件，b是第二排序条件
-    arraySort: function (arr, sortText) {
+    export const arraySort=function (arr, sortText) {
         if (!sortText) {
             return arr
         }
@@ -710,9 +709,9 @@ var CommonFun = {
             })
         }
         return _arr;
-    },
+    }
     //创建正则字符
-    createKeyExp: function (strArr) {
+    export const createKeyExp=function (strArr) {
         var str = "";
         for (var i = 0; i < strArr.length; i++) {
             if (i != strArr.length - 1) {
@@ -722,11 +721,11 @@ var CommonFun = {
             }
         }
         return "(" + str + ")";
-    },
+    }
     //关键字加标签（多个关键词用空格隔开）
     //ecDo.findKey('守侯我oaks接到了来自下次你离开快乐吉祥留在开城侯','守侯 开','i')
     //"<i>守侯</i>我oaks接到了来自下次你离<i>开</i>快乐吉祥留在<i>开</i>城侯"
-    findKey: function (str, key, el) {
+    export const findKey=function (str, key, el) {
         var arr = null,
             regStr = null,
             content = null,
@@ -742,13 +741,13 @@ var CommonFun = {
         //过滤html标签 替换标签，往关键字前后加上标签
         content=content.replace(/<\/?[^>]*>/g, '')
         return content.replace(Reg, "<" + _el + ">$1</" + _el + ">");
-    },
+    }
     //数据类型判断
     //ecDo.istype([],'array')
     //true
     //ecDo.istype([])
     //'[object Array]'
-    istype: function (o, type) {
+    export const istype=function (o, type) {
         if(_type){
             var _type = type.toLowerCase();
         }
@@ -776,13 +775,13 @@ var CommonFun = {
             default:
                 return Object.prototype.toString.call(o)
         }
-    },
+    }
     //找出最长单词 (Find the Longest word in a String)
     //longestWord('Find the Longest word in a String')
     //7
     //longestWord('Find|the|Longest|word|in|a|String','|')
     //7
-    longestWord: function (str, splitType) {
+    export const longestWord=function (str, splitType) {
         var _splitType = splitType || /\s+/g,
             _max = 0;
         var strArr = str.split(_splitType);
@@ -792,12 +791,12 @@ var CommonFun = {
             }
         })
         return _max;
-    },
+    }
     //句中单词首字母大写 (Title Case a Sentence)
     //这个我也一直在纠结，英文标题，即使是首字母大写，也未必每一个单词的首字母都是大写的，但是又不知道哪些应该大写，哪些不应该大写
     //ecDo.titleCaseUp('this is a title')
     //"This Is A Title"
-    titleCaseUp: function (str, splitType) {
+    export const titleCaseUp=function (str, splitType) {
         var _splitType = splitType || /\s+/g;
         var strArr = str.split(_splitType),
             result = "",_this=this
@@ -805,9 +804,9 @@ var CommonFun = {
             result += _this.changeCase(item, 1) + ' ';
         })
         return this.trim(result, 4)
-    },
+    }
     //5.手机类型判断
-    browserInfo: function (type) {
+    export const browserInfo=function (type) {
         switch (type) {
             case 'android':
                 return navigator.userAgent.toLowerCase().indexOf('android') !== -1
@@ -820,7 +819,7 @@ var CommonFun = {
             default:
                 return navigator.userAgent.toLowerCase()
         }
-    },
+    }
     //过滤字符串(html标签，表情，特殊字符)
     //字符串，替换内容（special-特殊字符,html-html标签,emjoy-emjoy表情,word-小写字母，WORD-大写字母，number-数字,chinese-中文），要替换成什么，默认'',保留哪些特殊字符
     //如果需要过滤多种字符，type参数使用,分割，如下栗子
@@ -828,7 +827,7 @@ var CommonFun = {
     //var str='asd    654a大蠢sasdasdASDQWEXZC6d5#%^*^&*^%^&*$\\"\'#@!()*/-())_\'":"{}?<div></div><img src=""/>啊实打实大蠢猪自行车这些课程';
     // ecDo.filterStr(str,'html,WORD,chinese,special','*','%?')
     //"asd    654a**sasdasd*********6d5#%^*^&*^%^&*$\"'#@!()*/-())_'":"{}?*****************"
-    filterStr:function(str,type,restr,spstr){
+    export const filterStr=function(str,type,restr,spstr){
         var typeArr=type.split(','),_str=str;
         for(var i=0,len=typeArr.length;i<len;i++){
             if(typeArr[i]==='special'){
@@ -864,6 +863,5 @@ var CommonFun = {
         }
         return _str;
     }
-}
-export default CommonFun;
+
 

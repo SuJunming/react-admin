@@ -1,14 +1,11 @@
 import React, 
 { Component } from 'react';
 import {
-    BrowserRouter,
     Route,
     Switch,
-    Link,
 } from 'react-router-dom';
 import Icons from '../components/UI/Icons';
 import Buttons from '../components/UI/Buttons';
-import App from '../App'
 export default class RouterUrl extends Component{
     render(){
         return( 
