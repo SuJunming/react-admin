@@ -150,7 +150,8 @@ module.exports = {
             loader: require.resolve('babel-loader'),
             options: {
               plugins: [
-                ['import', [{ libraryName: 'antd', style: 'css' }]],  // import less
+                ['transform-decorators-legacy'],
+                ['import', [{ libraryName: 'antd', style: 'css' }]]  // import less
             ],
               compact: true,
             },
