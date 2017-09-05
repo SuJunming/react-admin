@@ -13,6 +13,7 @@ export default class RouterUrl extends Component{
                     <Route exact path="/" component={Buttons}/>
                     <Route path='/ui/buttons' component={Buttons}/>
                     <Route path='/ui/icons' component={Icons}/>
+                    <Route component={Icons}/>
                 </Switch>
         )
     }
