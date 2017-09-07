@@ -41,3 +41,9 @@
   border-radius: 6px;
   margin: 16px;
 }
+.ant-breadcrumb{
+  height: 30px;
+  line-height: 40px;
+  font-size: 14px;
+  margin-left: 20px;
+}
