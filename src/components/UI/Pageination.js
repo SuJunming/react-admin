@@ -14,6 +14,16 @@ class Pageination extends Component {
   render() {
     return (
       <div>
+          <Breadcrumb>
+          <Breadcrumb.Item href="">
+            <Icon type="home" />
+          </Breadcrumb.Item>
+          <Breadcrumb.Item href="">
+            <Icon type="credit-card" />
+            <span>UI</span>
+          </Breadcrumb.Item>
+          <Breadcrumb.Item>Pageination</Breadcrumb.Item>
+        </Breadcrumb>
         <Row>
           <Col span={12}>
             <Content
