@@ -3,7 +3,7 @@
 ### 记得star哦😁👍
 ### 前言
   欢迎使用后台管理系统解决方案
-  本项目是针对后台人员or外包人员or快速搭建后台管理系统创建
+  本项目是针对(后台人员)or(外包人员)or前端快速搭建后台管理系统而创建
 - [GitHub地址](https://github.com/SuJunming/rc-admin)
 ### 依赖模块
 <span style="color: rgb(184,49,47);">项目是用create-react-app创建的，主要还是列出新加的功能依赖包</span>
