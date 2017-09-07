@@ -38,7 +38,7 @@ class App extends Component {
       <div className="App">
         <Layout style={{ height: "100%" }}>
         <Sider trigger={null} collapsible collapsed={this.state.collapsed}>
-          <div className='logo'/>
+          <div className='logo' style={{color:'#fff'}}>Su</div>
             <Nav/>
           </Sider>
           <Layout>

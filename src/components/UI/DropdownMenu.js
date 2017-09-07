@@ -10,6 +10,8 @@ import {
   Layout,
   Button
 } from "antd";
+import NProgress from "nprogress";
+import "nprogress/nprogress.css";
 const { Content } = Layout;
 const menu = (
   <Menu>
@@ -56,6 +58,12 @@ const menudirection = (
   </Menu>
 );
 class DropdownMenu extends Component {
+  componentWillMount = () => {
+    NProgress.start();
+  };
+  componentDidMount = () => {
+    NProgress.done();
+  };
   handleButtonClick = e => {
     message.info("Click on left button.");
   };
