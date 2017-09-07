@@ -1,6 +1,7 @@
 # rc-admin 
 > react-后台管理系统
-[![Build Status](https://travis-ci.org/toothedcat/vue-antd-mobile.svg?branch=master)](https://travis-ci.org/toothedcat/vue-antd-mobile)
+
+[![Build Status](https://travis-ci.org/toothedcat/vue-antd-mobile.svg?branch=master)](https://github.com/SuJunming/rc-admin)
 [![Coverage Status](https://coveralls.io/repos/github/toothedcat/vue-antd-mobile/badge.svg?branch=master)](https://coveralls.io/github/toothedcat/vue-antd-mobile?branch=master)
 
 [Home 主页](https://github.com/SuJunming/rc-admin)
