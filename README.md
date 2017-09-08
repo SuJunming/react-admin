@@ -3,6 +3,9 @@
 
 [Home 主页](https://github.com/SuJunming/rc-admin)
 [Demo 示例](https://sujunming.github.io/)
+
+[![Build Status](https://travis-ci.org/SuJunming/rc-admin.svg?branch=master)](https://github.com/SuJunming/rc-admin)
+[![Coverage Status](https://coveralls.io/repos/github/toothedcat/vue-antd-mobile/badge.svg?branch=master)](https://coveralls.io/github/toothedcat/vue-antd-mobile?branch=master)
 ### 前言
   欢迎使用后台管理系统解决方案
   本项目是针对(后台人员)or(外包人员)or前端快速搭建后台管理系统而创建
