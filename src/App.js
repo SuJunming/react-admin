@@ -10,7 +10,8 @@ import {trim} from './javascript/commonFun';
 import "./App.css";
 const { Header, Sider,Footer } = Layout
 const mapStateToProps = state => {
-  const { Data = {data: {}} } = state.defaultData;
+  console.log(state);
+  const  Data = state.defaultData;
   return {Data};
 };
 const mapDispatchToProps = dispatch => ({
