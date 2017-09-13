@@ -30,7 +30,7 @@ class App extends Component {
   };
   render() {
     console.log('初始化redux-state:');
-    console.log(this.props.receiveData);
+    console.log(this.props.Data);
     console.log('公共函数一:去除空格(另外几十种方法commonFun查看)');
     let a=" a   "
     console.log(trim(a,1));
