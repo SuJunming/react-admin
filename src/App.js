@@ -10,12 +10,11 @@ import {trim} from './javascript/commonFun';
 import "./App.css";
 const { Header, Sider,Footer } = Layout
 const mapStateToProps = state => {
-  console.log(state);
   const  Data = state.defaultData;
   return {Data};
 };
 const mapDispatchToProps = dispatch => ({
-  receiveData: bindActionCreators(receiveData, dispatch)
+  receiveData:bindActionCreators(receiveData, dispatch)
 });
 @connect(mapStateToProps,mapDispatchToProps) 
 class App extends Component {
@@ -28,6 +27,10 @@ class App extends Component {
       collapsed: !this.state.collapsed
     });
   };
+  componentDidMount = () => {
+    this.props.receiveData();
+  }
+  
   render() {
     console.log('初始化redux-state:');
     console.log(this.props.Data);
