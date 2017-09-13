@@ -1,7 +1,10 @@
 # rc-admin 
-### author:95小生_苏俊明 
-### 记得star哦😁👍
-### 前言
+> react-后台管理系统
+
+[Home 主页](https://github.com/SuJunming/rc-admin)
+[Demo 示例](https://sujunming.github.io/)
+
+
   欢迎使用后台管理系统解决方案
   本项目是针对(后台人员)or(外包人员)or前端快速搭建后台管理系统而创建
 - [GitHub地址](https://github.com/SuJunming/rc-admin)
