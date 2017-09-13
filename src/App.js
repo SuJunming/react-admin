@@ -5,6 +5,7 @@ import { BrowserRouter } from "react-router-dom";
 import { connect } from 'react-redux';
 import { receiveData } from './action';
 import Nav from "./router/Nav";
+import * as type from './action/type';
 import RouterUrl from "./router/RouterUrl";
 import {trim} from './javascript/commonFun';
 import "./App.css";
@@ -14,11 +15,11 @@ const mapStateToProps = state => {
   const  Data = state.defaultData;
   return {Data};
 };
-const mapDispatchToProps = dispatch => ({
-  receiveData: bindActionCreators(receiveData, dispatch)
-});
-@connect(mapStateToProps,mapDispatchToProps) 
+@connect(mapStateToProps) 
 class App extends Component {
+  constructor(props){
+    super(props)
+  }
   state = {
     collapsed: false,
   };
@@ -28,6 +29,11 @@ class App extends Component {
       collapsed: !this.state.collapsed
     });
   };
+  componentDidMount = () => {
+    console.log(this.props)
+    this.props.dispatch(receiveData);
+  }
+  
   render() {
     console.log('初始化redux-state:');
     console.log(this.props.Data);

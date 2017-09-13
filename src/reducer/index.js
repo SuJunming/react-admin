@@ -4,7 +4,7 @@ import * as type from '../action/type';
 
 const defaultData = (state = {}, action) => {
     if(action.type==type.REQUEST_DATA){
-        console.log('111');
+        console.log('111')
     }
     console.log(action.type);
     switch (action.type) {
