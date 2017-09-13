@@ -17,7 +17,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => ({
   receiveData: bindActionCreators(receiveData, dispatch)
 });
-@connect(mapStateToProps) 
+@connect(mapStateToProps,mapDispatchToProps) 
 class App extends Component {
   state = {
     collapsed: false,
@@ -28,11 +28,6 @@ class App extends Component {
       collapsed: !this.state.collapsed
     });
   };
-  componentDidMount = () => {
-    const {dispatch}=this.props;
-    dispatch(receiveData);
-  }
-  
   render() {
     console.log('初始化redux-state:');
     console.log(this.props.Data);
