@@ -5,7 +5,6 @@ import { BrowserRouter } from "react-router-dom";
 import { connect } from 'react-redux';
 import { receiveData } from './action';
 import Nav from "./router/Nav";
-import * as type from './action/type';
 import RouterUrl from "./router/RouterUrl";
 import {trim} from './javascript/commonFun';
 import "./App.css";
@@ -15,11 +14,11 @@ const mapStateToProps = state => {
   const  Data = state.defaultData;
   return {Data};
 };
+const mapDispatchToProps = dispatch => ({
+  receiveData: bindActionCreators(receiveData, dispatch)
+});
 @connect(mapStateToProps) 
 class App extends Component {
-  constructor(props){
-    super(props)
-  }
   state = {
     collapsed: false,
   };
@@ -30,8 +29,8 @@ class App extends Component {
     });
   };
   componentDidMount = () => {
-    console.log(this.props)
-    this.props.dispatch(receiveData);
+    const {dispatch}=this.props;
+    dispatch(receiveData);
   }
   
   render() {
