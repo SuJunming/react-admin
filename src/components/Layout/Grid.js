@@ -30,7 +30,7 @@ export const Grid = (props) => {
                 <h2>Advance use</h2>
                 <div>
                     <Row>
-                        <Col span={24} className={styles.layoutGridItem}>col-24</Col>
+                        <Col span={24} className={styles.layoutGridItem}>col-20</Col>
                     </Row>
                     <Row>
                         <Col span={12} className={styles.layoutGridItem}>col-12</Col>
