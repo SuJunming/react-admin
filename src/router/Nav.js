@@ -76,6 +76,15 @@ class Nav extends Component {
           <Link to={`/ui/pageination`}>pageination</Link>
         </Menu.Item>
         </SubMenu>
+        <SubMenu
+          key={`/Layout`}
+          title={
+            <span><Icon type="credit-card"/><span>Layout</span></span>
+          }>
+          <Menu.Item>
+            <Link to={`/layout/grid`}>Grid</Link>
+          </Menu.Item>
+        </SubMenu>
       </Menu>
     );
   }
