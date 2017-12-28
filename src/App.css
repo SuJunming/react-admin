@@ -1,20 +1,20 @@
-.App {
+:global .App {
   height: 100%
 }
 
-.App-logo {
+:global .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;
 }
 
-.App-header {
+:global .App-header {
   background-color: #222;
   height: 150px;
   padding: 20px;
   color: white;
 }
 
-.App-intro {
+:global .App-intro {
   font-size: large;
 }
 
@@ -22,7 +22,7 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
-#components-layout-demo-custom-trigger .trigger {
+:global #components-layout-demo-custom-trigger .trigger {
   font-size: 18px;
   line-height: 64px;
   padding: 0 16px;
@@ -30,10 +30,10 @@
   transition: color .3s;
 }
 
-#components-layout-demo-custom-trigger .trigger:hover {
+:global #components-layout-demo-custom-trigger .trigger:hover {
   color: #108ee9;
 }
- .logo {
+:global .logo {
   height: 40px;
   line-height: 40px;
   text-align: center;
@@ -41,7 +41,7 @@
   border-radius: 6px;
   margin: 16px;
 }
-.ant-breadcrumb{
+:global .ant-breadcrumb{
   height: 30px;
   line-height: 40px;
   font-size: 14px;

@@ -1,11 +1,11 @@
 import React from 'react'
 import {Layout, Row, Col} from 'antd';
-import './Grid.css';
+import styles from './Grid.css';
 let {Content} = Layout;
 export const Grid = (props) => {
     return (
         <div>
-            <Content className="layout-grid-content">
+            <Content className={styles.layoutGridContent}>
                 <h2>Basic use</h2>
                 <div>
                     <Row span={24}>col-24</Row>
