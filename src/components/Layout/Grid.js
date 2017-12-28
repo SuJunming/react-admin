@@ -42,10 +42,10 @@ export const Grid = (props) => {
                         <Col span={8} className={styles.layoutGridItem}>col-8</Col>
                     </Row>
                     <Row gutter={16}>
-                        <Col span={6} className={styles.layoutGridItem}>col-6</Col>
-                        <Col span={6} className={styles.layoutGridItem}>col-6</Col>
-                        <Col span={6} className={styles.layoutGridItem}>col-6</Col>
-                        <Col span={6} className={styles.layoutGridItem}>col-6</Col>
+                        <Col span={6} className={styles.layoutGridItem}><div>col-6</div></Col>
+                        <Col span={6} className={styles.layoutGridItem}><div>col-6</div></Col>
+                        <Col span={6} className={styles.layoutGridItem}><div>col-6</div></Col>
+                        <Col span={6} className={styles.layoutGridItem}><div>col-6</div></Col>
                     </Row>
                 </div>
             </Content>
