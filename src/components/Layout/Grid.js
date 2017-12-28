@@ -1,6 +1,7 @@
 import React from 'react'
 import {Layout, Row, Col} from 'antd';
 import styles from './Grid.css';
+const DemoBox = props => <div className={`height-${props.value} ${styles.layoutGridItem}`}>{props.children}</div>;
 let {Content} = Layout;
 export const Grid = (props) => {
     return (
@@ -111,38 +112,125 @@ export const Grid = (props) => {
                     <h3>flex</h3>
                     <h4>justify='start'</h4>
                     <Row type="flex" justify="start">
-                        <Col span={4}><div className={styles.layoutGridItem}>col-4</div></Col>
-                        <Col span={4}><div className={styles.layoutGridItem}>col-4</div></Col>
-                        <Col span={4}><div className={styles.layoutGridItem}>col-4</div></Col>
-                        <Col span={4}><div className={styles.layoutGridItem}>col-4</div></Col>
+                        <Col span={4}>
+                            <div className={styles.layoutGridItem}>col-4</div>
+                        </Col>
+                        <Col span={4}>
+                            <div className={styles.layoutGridItem}>col-4</div>
+                        </Col>
+                        <Col span={4}>
+                            <div className={styles.layoutGridItem}>col-4</div>
+                        </Col>
+                        <Col span={4}>
+                            <div className={styles.layoutGridItem}>col-4</div>
+                        </Col>
                     </Row>
                     <h4>justify='center'</h4>
                     <Row type="flex" justify="center">
-                        <Col span={4}><div className={styles.layoutGridItem}>col-4</div></Col>
-                        <Col span={4}><div className={styles.layoutGridItem}>col-4</div></Col>
-                        <Col span={4}><div className={styles.layoutGridItem}>col-4</div></Col>
-                        <Col span={4}><div className={styles.layoutGridItem}>col-4</div></Col>
+                        <Col span={4}>
+                            <div className={styles.layoutGridItem}>col-4</div>
+                        </Col>
+                        <Col span={4}>
+                            <div className={styles.layoutGridItem}>col-4</div>
+                        </Col>
+                        <Col span={4}>
+                            <div className={styles.layoutGridItem}>col-4</div>
+                        </Col>
+                        <Col span={4}>
+                            <div className={styles.layoutGridItem}>col-4</div>
+                        </Col>
                     </Row>
                     <h4>justify='end'</h4>
                     <Row type="flex" justify="end">
-                        <Col span={4}><div className={styles.layoutGridItem}>col-4</div></Col>
-                        <Col span={4}><div className={styles.layoutGridItem}>col-4</div></Col>
-                        <Col span={4}><div className={styles.layoutGridItem}>col-4</div></Col>
-                        <Col span={4}><div className={styles.layoutGridItem}>col-4</div></Col>
+                        <Col span={4}>
+                            <div className={styles.layoutGridItem}>col-4</div>
+                        </Col>
+                        <Col span={4}>
+                            <div className={styles.layoutGridItem}>col-4</div>
+                        </Col>
+                        <Col span={4}>
+                            <div className={styles.layoutGridItem}>col-4</div>
+                        </Col>
+                        <Col span={4}>
+                            <div className={styles.layoutGridItem}>col-4</div>
+                        </Col>
                     </Row>
                     <h4>justify='space-between'</h4>
                     <Row type="flex" justify="space-between">
-                        <Col span={4}><div className={styles.layoutGridItem}>col-4</div></Col>
-                        <Col span={4}><div className={styles.layoutGridItem}>col-4</div></Col>
-                        <Col span={4}><div className={styles.layoutGridItem}>col-4</div></Col>
-                        <Col span={4}><div className={styles.layoutGridItem}>col-4</div></Col>
+                        <Col span={4}>
+                            <div className={styles.layoutGridItem}>col-4</div>
+                        </Col>
+                        <Col span={4}>
+                            <div className={styles.layoutGridItem}>col-4</div>
+                        </Col>
+                        <Col span={4}>
+                            <div className={styles.layoutGridItem}>col-4</div>
+                        </Col>
+                        <Col span={4}>
+                            <div className={styles.layoutGridItem}>col-4</div>
+                        </Col>
                     </Row>
                     <h4>justify='space-around'</h4>
                     <Row type="flex" justify="space-around">
-                        <Col span={4}><div className={styles.layoutGridItem}>col-4</div></Col>
-                        <Col span={4}><div className={styles.layoutGridItem}>col-4</div></Col>
-                        <Col span={4}><div className={styles.layoutGridItem}>col-4</div></Col>
-                        <Col span={4}><div className={styles.layoutGridItem}>col-4</div></Col>
+                        <Col span={4}>
+                            <div className={styles.layoutGridItem}>col-4</div>
+                        </Col>
+                        <Col span={4}>
+                            <div className={styles.layoutGridItem}>col-4</div>
+                        </Col>
+                        <Col span={4}>
+                            <div className={styles.layoutGridItem}>col-4</div>
+                        </Col>
+                        <Col span={4}>
+                            <div className={styles.layoutGridItem}>col-4</div>
+                        </Col>
+                    </Row>
+                    <p>Align Top</p>
+                    <Row type="flex" justify="center" align="top">
+                        <Col span={4}>
+                            <DemoBox value={100}>col-4</DemoBox>
+                        </Col>
+                        <Col span={4}>
+                            <DemoBox value={50}>col-4</DemoBox>
+                        </Col>
+                        <Col span={4}>
+                            <DemoBox value={120}>col-4</DemoBox>
+                        </Col>
+                        <Col span={4}>
+                            <DemoBox value={80}>col-4</DemoBox>
+                        </Col>
+                    </Row>
+
+                    <p>Align Center</p>
+                    <Row type="flex" justify="space-around" align="middle">
+                        <Col span={4}>
+                            <DemoBox value={100}>col-4</DemoBox>
+                        </Col>
+                        <Col span={4}>
+                            <DemoBox value={50}>col-4</DemoBox>
+                        </Col>
+                        <Col span={4}>
+                            <DemoBox value={120}>col-4</DemoBox>
+                        </Col>
+                        <Col span={4}>
+                            <DemoBox value={80}>col-4</DemoBox>
+                        </Col>
+                    </Row>
+
+                    <p>Align Bottom</p>
+                    <Row type="flex" justify="space-between" align="bottom">
+                        <Col span={4}>
+                            <DemoBox value={100}>col-4</DemoBox>
+                        </Col>
+                        <Col span={4}>
+                            <DemoBox value={50}>col-4</DemoBox>
+                        </Col>
+                        <Col span={4}>
+                            <DemoBox value={120}>col-4</DemoBox>
+                        </Col>
+                        <Col span={4}>
+                            <DemoBox value={80}>col-4</DemoBox>
+                        </Col>
                     </Row>
                 </div>
             </Content>
