@@ -1,7 +1,16 @@
 import React from 'react'
 import {Layout, Row, Col} from 'antd';
 import styles from './Grid.css';
-const DemoBox = props => <div className={`height-${props.value} ${styles.layoutGridItem}`} style={{height:props.value+'px'}}>{props.children}</div>;
+const DemoBox = props => <div
+    className={`height-${props.value} ${styles.layoutGridItem}`}
+    style={{
+    height: props.value + 'px'
+}}>{props.children}</div>;
+const DemoBox1 = props =>{
+    return (
+        <div className={styles.layoutGridItem}>{props.children}</div>
+    )
+}
 let {Content} = Layout;
 export const Grid = (props) => {
     return (
@@ -231,6 +240,13 @@ export const Grid = (props) => {
                         <Col span={4}>
                             <DemoBox value={80}>col-4</DemoBox>
                         </Col>
+                    </Row>
+                    <h3>Order</h3>
+                    <Row type="flex">
+                        <Col span={6} order={4}><DemoBox1>1 col-order-4</DemoBox1></Col>
+                        <Col span={6} order={3}><DemoBox1>2 col-order-3</DemoBox1></Col>
+                        <Col span={6} order={2}><DemoBox1>3 col-order-2</DemoBox1></Col>
+                        <Col span={6} order={1}><DemoBox1>4 col-order-1</DemoBox1></Col>
                     </Row>
                 </div>
             </Content>
