@@ -1,3 +1,9 @@
+:global .ant-row>div:nth-child(2n) div{
+    background: deepskyblue
+}
+:global .ant-row>div:nth-child(2n+1) div{
+    background: rgb(50, 181, 224)
+}
 .layoutGridContent {
     padding: 20px 30px;
 }
@@ -8,12 +14,4 @@
     line-height: 50px;
     text-align: center;
     margin: 10px 0;
-}
-
-.layoutGridItem:nth-child(2n) {
-    background: deepskyblue;
-}
-
-.layoutGridItem:nth-child(2n+1) {
-    background: rgb(20, 164, 212);
 }
