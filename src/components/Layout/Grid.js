@@ -49,6 +49,15 @@ export const Grid = (props) => {
                         <Col span={6}><div className={styles.layoutGridItem}>col-6-gutter-16</div></Col>
                         <Col span={6}><div className={styles.layoutGridItem}>col-6-gutter-16</div></Col>
                     </Row>
+                    <Row>
+                        <Col span={18}><div className={styles.layoutGridItem}>col-18</div></Col>
+                        <Col span={6}><div className={styles.layoutGridItem}>col-6</div></Col>
+                    </Row>
+                    <h3>push/pull</h3>
+                    <Row>
+                        <Col span={18} push={9}><div className={styles.layoutGridItem}>col-18</div></Col>
+                        <Col span={6} pull={12}><div className={styles.layoutGridItem}>col-6</div></Col>
+                    </Row>
                 </div>
             </Content>
         </div>
