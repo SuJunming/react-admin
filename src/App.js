@@ -56,6 +56,13 @@ class App extends Component {
                 style={{ fontSize: 20,color:'#fff' }}
               />
             </Header>
+            {
+              <style>
+                .text{
+                  
+                }
+              </style>
+            }
               <RouterUrl/>
               <Footer style={{ textAlign:'center' }}>
               rc-Admin ©2017 Created by 827606400@qq.com

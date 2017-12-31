@@ -50,9 +50,7 @@
 
 ##### 1.克隆项目
 ```js
-git clone https://github.com/SuJunming/rc-admin.git
-or
-ssh: git@github.com:SuJunming/rc-admin.git
+git clone https://github.com/SuJunming/react15-admin.git
 ```
 ##### 2.npm安装相关包文件(国内建议增加淘宝镜像源，不然很慢，你懂的😁)
 ```js
