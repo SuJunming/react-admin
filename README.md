@@ -9,8 +9,8 @@
   本项目是针对(后台人员)or(外包人员)or前端快速搭建后台管理系统而创建
 - [GitHub地址](https://github.com/SuJunming/rc-admin)
 ### 最近更新
-```js
-升级所有模块到最新
+```jsn
+升级所有模块到最新,近期会陆续更新
 ```
 ### 依赖模块
 <span style="color: rgb(184,49,47);">项目是用create-react-app创建的，主要还是列出新加的功能依赖包</span>
