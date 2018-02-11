@@ -3,15 +3,15 @@ import { Layout, Icon } from "antd";
 import { bindActionCreators } from 'redux';
 import { BrowserRouter } from "react-router-dom";
 import { connect } from 'react-redux';
-import { receiveData } from './action';
+import { receiveData } from './redux/action';
 import Nav from "./router/Nav";
 import RouterUrl from "./router/RouterUrl";
 import {trim} from './javascript/commonFun';
 import "./App.css";
 const { Header, Sider,Footer } = Layout
 const mapStateToProps = state => {
-  const  Data = state.defaultData;
-  return {Data};
+  const  data = state.defaultData;
+  return {data};
 };
 const mapDispatchToProps = dispatch => ({
   receiveData:bindActionCreators(receiveData, dispatch)
@@ -27,13 +27,13 @@ class App extends Component {
       collapsed: !this.state.collapsed
     });
   };
-  componentDidMount = () => {
-    this.props.receiveData();
+  componentDidMount = async () => {
+    await this.props.receiveData();
+    console.log(this.props.data)
   }
   
   render() {
     console.log('初始化redux-state:');
-    console.log(this.props.Data);
     console.log('公共函数一:去除空格(另外几十种方法commonFun查看)');
     let a=" a   "
     console.log(trim(a,1));

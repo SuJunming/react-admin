@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 import registerServiceWorker from './registerServiceWorker';
 import './index.css';
-import reducer from './reducer';
+import reducer from './redux/reducer';
 import App from './App'
 // redux 注入操作
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;

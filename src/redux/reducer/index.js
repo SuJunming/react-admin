@@ -1,6 +1,6 @@
 
 import { combineReducers } from 'redux';
-import * as type from '../action/type';
+import * as type from '../type';
 
 const defaultData = (state = {}, action) => {
     switch (action.type) {
