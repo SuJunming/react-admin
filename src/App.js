@@ -6,7 +6,6 @@ import { connect } from 'react-redux';
 import { receiveData } from './redux/action';
 import Nav from "./router/Nav";
 import RouterUrl from "./router/RouterUrl";
-import {trim} from './javascript/commonFun';
 import "./App.css";
 const { Header, Sider,Footer } = Layout
 const mapStateToProps = state => {
@@ -29,14 +28,12 @@ class App extends Component {
   };
   componentDidMount = async () => {
     await this.props.receiveData();
+    console.log('初始化redux-state:');
     console.log(this.props.data)
   }
   
   render() {
-    console.log('初始化redux-state:');
-    console.log('公共函数一:去除空格(另外几十种方法commonFun查看)');
-    let a=" a   "
-    console.log(trim(a,1));
+    console.log('公共函数:commonFun查看');
     return (
       <BrowserRouter>
       <div className="App">
