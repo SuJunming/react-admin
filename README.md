@@ -7,6 +7,7 @@
 
   欢迎使用后台管理系统解决方案
   本项目是针对(后台人员)or(外包人员)or前端快速搭建后台管理系统而创建
+  项目过老.无维护.
 - [GitHub地址](https://github.com/SuJunming/rc-admin)
 ### 最近更新
 ```jsn
